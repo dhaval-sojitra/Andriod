@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="421dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="448dp"
         android:text="OFF" />
 
     <ImageButton
@@ -66,9 +66,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="314dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="327dp"
         android:text="Java" />
 
     <CheckBox
@@ -80,7 +80,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="265dp"
+        android:layout_marginBottom="278dp"
         android:text="Android" />
 
     <CheckBox
@@ -90,9 +90,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="209dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="229dp"
         android:text="Python" />
 
     <TextView
@@ -103,10 +103,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="499dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="76dp"
         android:text="Selected Options" />
 
     <RadioGroup
@@ -118,7 +118,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="183dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="180dp"
         >
 
 
@@ -153,8 +153,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="102dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="146dp"
         android:text="Selected Option" />
 
     <Button
@@ -163,8 +163,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="357dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="395dp"
         android:text="Reset" />
 
 
