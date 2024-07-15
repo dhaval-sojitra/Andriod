@@ -1,3 +1,4 @@
+
 abstract class Shiva {
     fun lordshiva(){
         println("Devo ke dev mahadev!!!");
