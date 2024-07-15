@@ -3,6 +3,7 @@ package com.example.relativelayout_allbuttons
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         var imgbtn : ImageButton = findViewById(R.id.imageButton)
         var tglbtn : ToggleButton = findViewById(R.id.toggleButton)
         var imgview : ImageView = findViewById(R.id.imageView)
+        var flotingbtn : FloatingActionButton =findViewById(R.id.floatingActionButton)
 
         button.setOnClickListener {
             Toast.makeText(applicationContext,"Simple Button Clicked..",Toast.LENGTH_LONG).show()
@@ -27,6 +29,10 @@ class MainActivity : AppCompatActivity() {
             else{
                 imgview.setImageResource(R.drawable.on)
             }
+        }
+        flotingbtn.setOnClickListener {
+            Toast.makeText(applicationContext,"" +
+                    "floating Action Button Clicked..",Toast.LENGTH_LONG).show()
         }
     }
 }
