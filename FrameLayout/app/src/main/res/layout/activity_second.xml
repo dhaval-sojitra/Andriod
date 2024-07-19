@@ -25,17 +25,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="553dp"/>
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="563dp"
+        android:foregroundGravity="center"
+        android:numStars="5" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="141dp"
+        android:layout_width="match_parent"
         android:layout_height="31dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="132dp"
         android:layout_marginBottom="500dp"
+        android:gravity="center"
         android:text="Rating :"
         android:textSize="25dp" />
 
@@ -52,12 +54,12 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="183dp"
         android:layout_marginBottom="350dp"
+        android:gravity="center"
         android:text="SeekBar Value : " />
 
 

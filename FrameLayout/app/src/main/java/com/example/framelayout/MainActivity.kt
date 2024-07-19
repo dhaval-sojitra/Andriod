@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         Thread(Runnable{
             var count = 0
             while (count <= 100){
-                Thread.sleep(100)
+                Thread.sleep(5)
                 count++
                 pb.setProgress(count)
                 pb.secondaryProgress = count + 10
