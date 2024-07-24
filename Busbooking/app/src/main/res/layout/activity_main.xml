@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/loginback"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/loginpng"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="50sp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="40dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edittext"
+            android:textColor="#000000"
+            android:hint="User Type(Admin/Client)"
+            android:layout_marginBottom="10dp"
+            android:includeFontPadding="true"
+                android:paddingLeft="6dp"
+            android:textAlignment="textStart"
+            android:textColorHint="#000000"
+            android:ems="12"
+            android:id="@+id/edtusertype"
+            />
+
+        <EditText
+            android:id="@+id/edtusername"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:ems="12"
+            android:hint="User Name"
+            android:includeFontPadding="true"
+            android:paddingLeft="6dp"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+
+            android:textColorHint="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+
+        <EditText
+            android:id="@+id/edtpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_security_24"
+            android:ems="12"
+            android:hint="Password"
+            android:includeFontPadding="true"
+            android:inputType="textPassword"
+            android:paddingLeft="6dp"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#FFFCFC"
+
+            android:id="@+id/btnlogin"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="#FFFCFC"
+            android:id="@+id/btnregester"/>
+
+    </LinearLayout>
+
+</LinearLayout>

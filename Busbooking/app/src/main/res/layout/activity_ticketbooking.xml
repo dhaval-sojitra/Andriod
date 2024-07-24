@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".ticketbooking">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advance Booking"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/edttfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_add_location_24"
+            android:ems="12"
+            android:hint="From"
+            android:includeFontPadding="true"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/edttto"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_add_location_24"
+            android:ems="12"
+            android:hint="To"
+            android:includeFontPadding="true"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/datePickerEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_baseline_date_range_24"
+            android:ems="12"
+            android:hint="Select Date"
+            android:includeFontPadding="true"
+            android:inputType="date"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_gravity="center"
+            android:textColor="#FFFCFC"
+            android:id="@+id/btntsearch"/>
+
+        <EditText
+            android:id="@+id/edttrid"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_numbers_24"
+            android:ems="12"
+            android:hint="Route Id"
+            android:includeFontPadding="true"
+            android:inputType="number"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/edttname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:ems="12"
+            android:hint="Passenger Name"
+            android:includeFontPadding="true"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/edttphone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/ic_baseline_phone_24"
+            android:ems="12"
+            android:hint="Phone"
+            android:includeFontPadding="true"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Book Ticket"
+                android:textColor="#FFFCFC"
+                android:id="@+id/btntbookticket"/>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookingrv"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
