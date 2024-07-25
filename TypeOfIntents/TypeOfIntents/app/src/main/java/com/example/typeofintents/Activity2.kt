@@ -5,7 +5,10 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import androidx.core.app.NavUtils
+import org.w3c.dom.Text
 
 class Activity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,5 +32,10 @@ class Activity2 : AppCompatActivity() {
             startActivity(i)
         }
 
+        var edtnum : EditText = findViewById(R.id.edtphone)
+        var numbtn : Button = findViewById(R.id.button2)
+        numbtn.setOnClickListener{
+            var uri = Uri.parse()
+        }
     }
 }
