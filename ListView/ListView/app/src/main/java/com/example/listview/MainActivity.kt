@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
 
             startActivity(i)
-//            Toast.makeText(applicationContext,value,Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,value,Toast.LENGTH_LONG).show()
         }
     }
 }
