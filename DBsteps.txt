@@ -1,0 +1,11 @@
+Step 1 :
+---------------
+create a dot kt file named as MyDBHelper.that have a class named as MyDBHelper.
+
+Step 2 :
+
+Inherit sqLiteOpenHelper class in the mydbhelper class.
+
+Step 3 :
+
+override onCreate() method and all onUpgrade() method
