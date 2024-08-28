@@ -48,27 +48,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insert"
-        android:layout_marginStart="5dp"/>
+        />
 
     <Button
         android:id="@+id/btnupdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:text="Update" />
 
         <Button
             android:id="@+id/btndelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="Delete" />
 
         <Button
             android:id="@+id/btnclear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="Clear" />
 
     </LinearLayout>
@@ -82,29 +79,49 @@
             android:id="@+id/btnnext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next"
-            android:layout_marginStart="5dp"/>
+            android:text="Next" />
 
         <Button
             android:id="@+id/btnprev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="Prev" />
 
         <Button
             android:id="@+id/btnfirst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="First" />
 
         <Button
             android:id="@+id/btnlast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="Last" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="Show all records" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
 
     </LinearLayout>
 </LinearLayout>
