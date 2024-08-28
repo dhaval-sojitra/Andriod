@@ -19,14 +19,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var edtname : EditText
     lateinit var edtcity : EditText
     lateinit var edtgender : EditText
+    lateinit var bt
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var btninsert : Button = findViewById(R.id.btninsert)
-        var btnshow : Button = findViewById(R.id.btnshow)
+        var btnupdate : Button = findViewById(R.id.btnupdate)
         var btnclear : Button = findViewById(R.id.btnclear)
+        var btndelete : Button = findViewById(R.id.btndelete)
         edtname = findViewById(R.id.edtname)
         edtcity = findViewById(R.id.edtcity)
         edtgender = findViewById(R.id.edtgender)
@@ -51,6 +53,20 @@ class MainActivity : AppCompatActivity() {
             db.insert("student",null,cv)
             Toast.makeText(applicationContext, "Record Inserted Successfully..", Toast.LENGTH_SHORT).show()
 
+        }
+
+        btnupdate.setOnClickListener {
+            var cv = ContentValues()
+            cv.put("name",edtname.text.toString())
+            cv.put("city",edtcity.text.toString())
+            cv.put("gender",edtgender.text.toString())
+            db.update("student",cv,"id = ?", arrayOf(rs.getString(0)))
+            Toast.makeText(applicationContext, "Record Update Successfully...", Toast.LENGTH_SHORT).show()
+        }
+
+        btndelete.setOnClickListener {
+            db.delete("student","id = ?", arrayOf(rs.getString(0)))
+            Toast.makeText(applicationContext, "Record Deleted Successfully...", Toast.LENGTH_SHORT).show()
         }
 
         btnclear.setOnClickListener {
