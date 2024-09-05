@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             var sg = SweepGradient(200f,1100f, intArrayOf(Color.RED,Color.YELLOW,Color.GREEN),null)
             p.shader = sg
-            canvas?.drawCircle(1230f,250f,200f,p)
+            canvas?.drawCircle(250f,1100f,200f,p)
         }
     }
 
