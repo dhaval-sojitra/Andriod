@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
         b1.setOnClickListener {
             var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivity(intent)
+            startActivityForResult(intent,101)
         }
     }
 
