@@ -1,21 +1,21 @@
 package com.example.location
 
 import android.Manifest
-import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
+import android.location.Geocoder
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import org.w3c.dom.Text
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var ed : EditText
-    lateinit var btn : Button
-    lateinit var tv : TextView
+    lateinit var ed: EditText
+    lateinit var btn: Button
+    lateinit var tv: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,20 +25,30 @@ class MainActivity : AppCompatActivity() {
         btn = findViewById(R.id.button)
         tv = findViewById(R.id.textView2)
 
-        if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION,android.Manifest.permission.ACCESS_COARSE_LOCATION),111)
-        }
-        else{
-            btn.setOnClickListener {
-                var city = ed.text.toString()
+        btn.setOnClickListener {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), 111)
+            } else {
+                val city = ed.text.toString()
                 forwardGeoCode(city)
             }
         }
-
     }
 
     private fun forwardGeoCode(city: String) {
-
+        val geocoder = Geocoder(this, Locale.getDefault())
+        try {
+            val addresses = geocoder.getFromLocationName(city, 1)
+            if (addresses.isNotEmpty()) {
+                val address = addresses[0]
+                val result = "${address.locality}, ${address.countryName}"
+                tv.text = result
+            } else {
+                tv.text = "No results found"
+            }
+        } catch (e: Exception) {
+            tv.text = "Error: ${e.message}"
+        }
     }
 
     override fun onRequestPermissionsResult(
@@ -47,7 +57,8 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if(requestCode == 111 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        if (requestCode == 111 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            val city = ed.text.toString()
             forwardGeoCode(city)
         }
     }
